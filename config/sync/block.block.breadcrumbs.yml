@@ -1,0 +1,20 @@
+uuid: 62375c4b-20b6-4197-a86a-bf1f5bbfe82f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cb_tasker
+id: breadcrumbs
+theme: cb_tasker
+region: primary_menu
+weight: -1
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
