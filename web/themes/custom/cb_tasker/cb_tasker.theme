@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_preprocess().
+ */
+
+function cb_tasker_preprocess(&$variables, $hook)
+{
+    $variables['attributes']['class'] = ['all-elements-class'];
+}

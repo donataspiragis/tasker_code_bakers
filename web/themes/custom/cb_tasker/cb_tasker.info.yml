@@ -1,0 +1,16 @@
+name: Tasker
+description: "Simple theme for simple tasks display"
+type: theme
+version: '1'
+core: 8.x
+base theme: false
+screenshot: screenshot.png
+logo: logo.svg
+regions:
+  header: 'Header'
+  primary_menu: 'Navigation'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+libraries:
+  - cb_tasker/cb-global
