@@ -1,0 +1,11 @@
+cb-global:
+  version: 1.x
+  css:
+    base:
+      css/main.css: {}
+    layout:
+      css/main.css: {}
+    theme:
+      css/main.css: {}
+  js:
+    js/main.js: {}

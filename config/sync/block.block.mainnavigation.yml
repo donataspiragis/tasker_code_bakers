@@ -1,0 +1,25 @@
+uuid: 84110101-2be5-40b3-9b70-76592ac6ad9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - cb_tasker
+id: mainnavigation
+theme: cb_tasker
+region: primary_menu
+weight: -2
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
