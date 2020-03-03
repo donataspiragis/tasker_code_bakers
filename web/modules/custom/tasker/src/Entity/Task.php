@@ -269,11 +269,11 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
-        'weight' => -6,
+        'weight' => -7,
       ])
       ->setDisplayOptions('form', [
         'type' => 'string_textfield',
-        'weight' => -6,
+        'weight' => -7,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
@@ -290,12 +290,12 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
-        'weight' => -5,
+        'weight' => -6,
       ])
       ->setDisplayOptions('form', [
         'type' => 'text_textarea',
         'rows' => 0,
-        'weight' => -5,
+        'weight' => -6,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
@@ -315,11 +315,11 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
-        'weight' => -4,
+        'weight' => -5,
       ])
       ->setDisplayOptions('form', [
         'type' => 'textarea',
-        'weight' => -4,
+        'weight' => -5,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
@@ -336,28 +336,33 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
-        'weight' => -3,
+        'weight' => -4,
       ])
       ->setDisplayOptions('form', [
         'type' => 'url',
-        'weight' => -3,
+        'weight' => -4,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(FALSE);
 
 
-    $ids = \Drupal::entityQuery('user')
-      ->condition('status', 1)
-      ->condition('roles', 'developer')
-      ->execute();
-    $users = User::loadMultiple($ids);
-
     $fields['task_developer'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Task developer'))
       ->setDescription(t('Task developer.'))
       ->setSetting('target_type', 'user')
-
+      ->setSetting('handler', 'default:user')
+      ->setSetting('handler_settings', [
+        'include_anonymous' => true,
+        'filter' => [
+          'type' => 'role',
+          'role' => [
+            'developer' => 'developer',
+            'techlead' => '0',
+          ],
+        ],
+        'target_bundles' => NULL,
+      ])
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
@@ -381,12 +386,23 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setLabel(t('Task techlead'))
       ->setDescription(t('Task techlead.'))
       ->setSetting('target_type', 'user')
-      ->setSetting('handler', 'default')
+      ->setSetting('handler', 'default:user')
+      ->setSetting('handler_settings', [
+        'include_anonymous' => true,
+        'filter' => [
+          'type' => 'role',
+          'role' => [
+            'developer' => '0',
+            'techlead' => 'techlead',
+          ],
+        ],
+        'target_bundles' => NULL,
+      ])
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'author',
-        'weight' => -3,
+        'weight' => -2,
       ])
       ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
@@ -395,7 +411,7 @@ class Task extends ContentEntityBase implements TaskInterface {
           'size' => 60,
           'placeholder' => '',
         ],
-        'weight' => -3,
+        'weight' => -2,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
@@ -412,11 +428,11 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'integer',
-        'weight' => -3,
+        'weight' => -1,
       ])
       ->setDisplayOptions('form', [
         'type' => 'integer',
-        'weight' => -3,
+        'weight' => -1,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
@@ -433,11 +449,11 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'integer',
-        'weight' => -3,
+        'weight' => 0,
       ])
       ->setDisplayOptions('form', [
         'type' => 'integer',
-        'weight' => -3,
+        'weight' => 0,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
@@ -454,11 +470,11 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'integer',
-        'weight' => -3,
+        'weight' => 1,
       ])
       ->setDisplayOptions('form', [
         'type' => 'integer',
-        'weight' => -3,
+        'weight' => 1,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)

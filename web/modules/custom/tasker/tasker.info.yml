@@ -8,3 +8,4 @@ dependencies:
   - options
   - field
   - field_ui
+  - cdp_registration
