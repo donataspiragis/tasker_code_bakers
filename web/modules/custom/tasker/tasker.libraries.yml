@@ -1,0 +1,6 @@
+tasker-global:
+  css:
+    layout:
+      css/tasker.css: {}
+    theme:
+      css/tasker.css: {}
