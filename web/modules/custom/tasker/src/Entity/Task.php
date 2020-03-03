@@ -37,6 +37,7 @@ use Drupal\user\Entity\User;
  *   base_table = "task",
  *   data_table = "task_field_data",
  *   translatable = TRUE,
+ *   fieldable = TRUE,
  *   admin_permission = "administer task entities",
  *   entity_keys = {
  *     "id" = "id",
@@ -250,6 +251,8 @@ class Task extends ContentEntityBase implements TaskInterface {
    * {@inheritdoc}
    */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
+
+
     $fields = parent::baseFieldDefinitions($entity_type);
 
     // Add the published field.
@@ -354,8 +357,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setLabel(t('Task developer'))
       ->setDescription(t('Task developer.'))
       ->setSetting('target_type', 'user')
-      ->setSetting('handler', 'default')
-      ->setSetting('handler', 'default')
+
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',

@@ -27,9 +27,20 @@ function tasker_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  */
 function tasker_theme() {
-  return [
-    'tasker' => [
-      'render element' => 'children',
+
+
+  $theme['task_theme'] = [
+    'variables' => [
+      'task_title' => NULL,
     ],
+    'template' => 'task',
   ];
+  return $theme;
+
+//  return [
+//    'tasker' => [
+//      'render element' => 'children',
+//    ],
+//  ];
 }
+

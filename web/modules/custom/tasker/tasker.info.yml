@@ -7,3 +7,4 @@ dependencies:
   - link
   - options
   - field
+  - field_ui
