@@ -1,0 +1,25 @@
+uuid: 96b3a137-8936-49b1-9d65-f480cbe6e4e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.registration_techlead
+  module:
+    - user
+id: user.user.registration_techlead
+targetEntityType: user
+bundle: user
+mode: registration_techlead
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  timezone: true

@@ -1,0 +1,21 @@
+uuid: 88c47679-4200-4f3f-8089-4f9633100cc5
+langcode: en
+status: true
+dependencies:
+  module:
+    - tasker
+  theme:
+    - cb_tasker
+id: tasklist
+theme: cb_tasker
+region: content
+weight: 0
+provider: null
+plugin: task_display
+settings:
+  id: task_display
+  label: 'Task list'
+  provider: tasker
+  label_display: visible
+  task_title: {  }
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: 6f4a11e4-ac83-4100-b809-99f37c9431a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.registration_developers
+label: registration_developers
+targetEntityType: user
+cache: true
