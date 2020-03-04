@@ -1,0 +1,21 @@
+uuid: 21c02e66-7b4b-47d6-b312-0779541ddeb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_languages
+  module:
+    - options
+    - user
+id: user.user.field_languages
+field_name: field_languages
+entity_type: user
+bundle: user
+label: Languages
+description: 'Chose your languages. mark with ctrl more than one if you want.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

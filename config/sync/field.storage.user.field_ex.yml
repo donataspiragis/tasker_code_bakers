@@ -1,0 +1,20 @@
+uuid: 95aa8831-88ec-4274-a043-fb6f6951b649
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_ex
+field_name: field_ex
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

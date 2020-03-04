@@ -1,4 +1,4 @@
-uuid: f6e364f0-19c1-4dc8-a22a-c5d453052445
+uuid: 11b83d80-b17e-427d-8e15-1bd14b35d851
 langcode: en
 status: true
 dependencies:
@@ -8,45 +8,48 @@ dependencies:
     - field.field.user.user.field_languages
     - field.field.user.user.field_last_name
   module:
+    - options
     - user
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
 content:
-  account:
+  field_ex:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_first_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_languages:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_last_name:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  member_for:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_ex:
-    weight: 4
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
-  field_first_name:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_last_name:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  language:
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden:
-  field_languages: true
-  timezone: true
+hidden: {  }

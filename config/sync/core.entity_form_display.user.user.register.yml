@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_ex
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_languages
+    - field.field.user.user.field_last_name
   module:
     - user
 id: user.user.register
@@ -22,4 +26,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_ex: true
+  field_first_name: true
+  field_languages: true
+  field_last_name: true
   timezone: true
