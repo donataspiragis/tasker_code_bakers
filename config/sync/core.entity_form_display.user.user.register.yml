@@ -1,0 +1,25 @@
+uuid: 2889fec1-0362-4a29-9352-a2f79bf61eb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+  module:
+    - user
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  timezone: true

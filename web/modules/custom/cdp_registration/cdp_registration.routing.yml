@@ -1,0 +1,15 @@
+cdp_registration.register_developer:
+  path: '/register/developer'
+  defaults:
+    _controller: '\Drupal\cdp_registration\Controller\RegistrationController::registerDeveloper'
+    _title: 'Create new account for Developers'
+  requirements:
+    _access_user_register: 'TRUE'
+
+cdp_registration.register_lead:
+  path: '/register/lead'
+  defaults:
+    _controller: '\Drupal\cdp_registration\Controller\RegistrationController::registerLead'
+    _title: 'Create new account for Techlead'
+  requirements:
+    _access_user_register: 'TRUE'

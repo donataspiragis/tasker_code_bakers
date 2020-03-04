@@ -1,0 +1,25 @@
+uuid: ebe21669-3735-4566-97c0-60479ae090e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.registration_developers
+  module:
+    - user
+id: user.user.registration_developers
+targetEntityType: user
+bundle: user
+mode: registration_developers
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  timezone: true
