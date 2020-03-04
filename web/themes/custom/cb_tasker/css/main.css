@@ -49,6 +49,8 @@ header {
 }
 .main-navigation > div >  ul {
   list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 .main-navigation > div > ul > li > a {
   text-decoration: none;
