@@ -1,22 +1,22 @@
-uuid: 84110101-2be5-40b3-9b70-76592ac6ad9e
+uuid: 2751b924-bb37-48a1-82fd-085612609d1a
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.account
   module:
     - system
   theme:
     - cb_tasker
-id: mainnavigation
+id: useraccountmenu
 theme: cb_tasker
 region: primary_menu
-weight: -3
+weight: -2
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:account'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'system_menu_block:account'
+  label: 'User account menu'
   provider: system
   label_display: '0'
   level: 1
