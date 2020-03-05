@@ -44,3 +44,8 @@ function tasker_theme() {
 //  ];
 }
 
+function tasker_entity_type_alter(array &$entity_types)
+{
+  $entity_types['task']->setFormClass('time_developer', \Drupal\tasker\Form\TimeRegister::class);
+  $entity_types['task']->setFormClass('time_lead', \Drupal\tasker\Form\TimeRegister::class);
+}

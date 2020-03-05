@@ -1,0 +1,34 @@
+uuid: 992a599c-4324-4210-bfe7-a9de347a8b32
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.task.time_lead
+  module:
+    - tasker
+id: task.task.time_lead
+targetEntityType: task
+bundle: task
+mode: time_lead
+content:
+  task_deadline:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  task_status:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  task_description: true
+  task_developer: true
+  task_techlead: true
+  task_time_true: true
+  task_time_wish: true
+  task_title: true
+  task_url: true

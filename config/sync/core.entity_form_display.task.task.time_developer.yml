@@ -1,0 +1,40 @@
+uuid: 045056bc-b4e0-4a83-9a47-3b3c812a6b47
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.task.time_developer
+  module:
+    - tasker
+id: task.task.time_developer
+targetEntityType: task
+bundle: task
+mode: time_developer
+content:
+  task_status:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  task_time_true:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  task_time_wish:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  task_deadline: true
+  task_description: true
+  task_developer: true
+  task_techlead: true
+  task_title: true
+  task_url: true

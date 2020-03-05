@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - system.menu.main
-    - user.role.administrator
   module:
     - link
     - options
     - tasker
     - text
-    - user
 id: task_list_super_adm
 label: 'Task List Super Adm'
 module: views
@@ -26,10 +24,8 @@ display:
     position: 0
     display_options:
       access:
-        type: role
-        options:
-          role:
-            administrator: administrator
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -972,7 +968,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.roles
       tags: {  }
   page_1:
     display_plugin: page
@@ -998,5 +993,4 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.roles
       tags: {  }
