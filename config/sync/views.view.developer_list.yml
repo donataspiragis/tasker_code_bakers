@@ -7,6 +7,7 @@ dependencies:
     - user.role.developer
   module:
     - link
+    - options
     - tasker
     - text
     - user
@@ -44,7 +45,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -399,7 +400,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: waiting
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -420,6 +421,72 @@ display:
           field_api_classes: false
           entity_type: task
           entity_field: task_deadline
+          plugin_id: field
+        task_time_wish:
+          id: task_time_wish
+          table: task_field_data
+          field: task_time_wish
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Task time by Developer'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: waiting
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: task
+          entity_field: task_time_wish
           plugin_id: field
         task_time_true:
           id: task_time_true
@@ -465,7 +532,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: waiting
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -556,6 +623,70 @@ display:
           entity_type: task
           entity_field: task_url
           plugin_id: field
+        task_status:
+          id: task_status
+          table: task_field_data
+          field: task_status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Task status'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: task
+          entity_field: task_status
+          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -619,7 +750,169 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-      sorts: {  }
+        task_status:
+          id: task_status
+          table: task_field_data
+          field: task_status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: task_status_op
+            label: 'Task status'
+            description: ''
+            use_operator: false
+            operator: task_status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: task_status
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              developer: '0'
+              techlead: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: true
+          group_info:
+            label: 'Task status'
+            description: ''
+            identifier: task_status
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'To do'
+                operator: '='
+                value: 'To do'
+              2:
+                title: 'In progress'
+                operator: '='
+                value: 'In progress'
+              3:
+                title: Done
+                operator: '='
+                value: Done
+          entity_type: task
+          entity_field: task_status
+          plugin_id: string
+        task_description__value:
+          id: task_description__value
+          table: task_field_data
+          field: task_description__value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: task_description__value_op
+            label: 'Task description'
+            description: ''
+            use_operator: false
+            operator: task_description__value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: task_description__value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              developer: '0'
+              techlead: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: task
+          entity_field: task_description
+          plugin_id: string
+        task_title:
+          id: task_title
+          table: task_field_data
+          field: task_title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: task_title_op
+            label: 'Task title'
+            description: ''
+            use_operator: false
+            operator: task_title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: task_title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              developer: '0'
+              techlead: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: task
+          entity_field: task_title
+          plugin_id: string
+      sorts:
+        created:
+          id: created
+          table: task_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: task
+          entity_field: created
+          plugin_id: date
       title: 'Developer List'
       header: {  }
       footer: {  }
@@ -663,6 +956,7 @@ display:
           entity_field: task_developer
           plugin_id: numeric
       display_extenders: {  }
+      css_class: developers-table
     cache_metadata:
       max-age: -1
       contexts:
