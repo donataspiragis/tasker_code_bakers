@@ -45,7 +45,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -957,6 +957,151 @@ display:
           entity_type: task
           entity_field: task_status
           plugin_id: string
+        task_developer:
+          id: task_developer
+          table: task_field_data
+          field: task_developer
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: task_developer_op
+            label: 'Task developer'
+            description: ''
+            use_operator: false
+            operator: task_developer_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: task_developer
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              developer: '0'
+              techlead: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: task
+          entity_field: task_developer
+          plugin_id: numeric
+        task_techlead:
+          id: task_techlead
+          table: task_field_data
+          field: task_techlead
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: task_techlead_op
+            label: 'Task techlead'
+            description: ''
+            use_operator: false
+            operator: task_techlead_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: task_techlead
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              developer: '0'
+              techlead: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: task
+          entity_field: task_techlead
+          plugin_id: numeric
+        task_title:
+          id: task_title
+          table: task_field_data
+          field: task_title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: task_title_op
+            label: 'Task title'
+            description: ''
+            use_operator: false
+            operator: task_title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: task_title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              developer: '0'
+              techlead: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: task
+          entity_field: task_title
+          plugin_id: string
       sorts: {  }
       title: 'Task List'
       header: {  }
@@ -988,7 +1133,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: 2
+        weight: -46
         context: '0'
         menu_name: main
     cache_metadata:

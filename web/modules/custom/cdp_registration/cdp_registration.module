@@ -1,8 +1,7 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\cdp_registration\Form\DeveloperRegisterForm;
-use Drupal\cdp_registration\Form\TechleadRegisterForm;
+
 /**
  * @file
  * Primary module hooks for Custom registration module and login.

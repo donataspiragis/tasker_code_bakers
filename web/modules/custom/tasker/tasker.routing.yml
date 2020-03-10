@@ -1,0 +1,15 @@
+tasker.register_developer:
+  path: '/tasker/developer/{task}'
+  defaults:
+    _controller: '\Drupal\tasker\Controller\TaskerController::timeDeveloper'
+    _title: 'Edit task time'
+  requirements:
+    _permission: 'access content'
+
+tasker.register_lead:
+  path: '/tasker/lead/{task}'
+  defaults:
+    _controller: '\Drupal\tasker\Controller\TaskerController::timeLead'
+    _title: 'Edit task time'
+  requirements:
+    _permission: 'access content'
