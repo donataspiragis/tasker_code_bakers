@@ -177,6 +177,7 @@ display:
         type: normal
         title: Home
         menu_name: main
+        weight: -50
     cache_metadata:
       max-age: -1
       contexts:

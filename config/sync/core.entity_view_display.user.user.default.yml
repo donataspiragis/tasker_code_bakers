@@ -8,8 +8,94 @@ dependencies:
     - field.field.user.user.field_languages
     - field.field.user.user.field_last_name
   module:
+    - layout_builder
     - options
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          351d90c1-b221-4ace-82f4-866b70663923:
+            uuid: 351d90c1-b221-4ace-82f4-866b70663923
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:user:user:member_for'
+            additional: {  }
+            weight: 0
+          8a06e207-c896-47ab-9337-e5e78998f9d9:
+            uuid: 8a06e207-c896-47ab-9337-e5e78998f9d9
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_first_name'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 1
+          de5f8018-cf44-4c1a-b894-255070e75423:
+            uuid: de5f8018-cf44-4c1a-b894-255070e75423
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_last_name'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 2
+          e21626a4-d6eb-43cd-b04e-284387de6a85:
+            uuid: e21626a4-d6eb-43cd-b04e-284387de6a85
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_languages'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 3
+          c4d5f191-a9d1-495c-a2d1-5a0d5251d3e0:
+            uuid: c4d5f191-a9d1-495c-a2d1-5a0d5251d3e0
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_ex'
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
 id: user.user.default
 targetEntityType: user
 bundle: user

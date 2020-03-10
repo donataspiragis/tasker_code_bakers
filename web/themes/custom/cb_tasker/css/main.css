@@ -41,6 +41,7 @@ header > .container > .all-elements-class > div >  a:nth-child(2) {
 }
 header {
   padding: 15px;
+  min-height: 110px;
 }
 .main-navigation {
   width: 100%;
