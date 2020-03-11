@@ -1,0 +1,13 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function tasker_statistics_theme() {
+  $theme['tasker_statistics_theme'] = [
+    'variables' => [
+      'total' => NULL,
+    ],
+    'template' => 'statistics',
+  ];
+  return $theme;
+}

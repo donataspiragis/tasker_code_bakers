@@ -1,0 +1,7 @@
+cdp_statistics.pages.render.statistics:
+  path: '/tasker/statistics'
+  defaults:
+    _title: 'Statistics page'
+    _controller: '\Drupal\tasker_statistics\Controller\StatisticsController::renderStatistics'
+  requirements:
+    _role: 'developer'
