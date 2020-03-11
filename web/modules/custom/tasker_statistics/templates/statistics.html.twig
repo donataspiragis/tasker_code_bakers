@@ -1,0 +1,12 @@
+<h1>Main graph</h1>
+<div class = "box" style="width: 600px">
+  <canvas id="statistics-chart" width="600" height="300"></canvas>
+</div>
+
+<h1>Graphs by tasks</h1>
+{% for i in 1..total %}
+  <div class = "box" style="width: 600px">
+    <canvas id="statistics-chart-{{ i }}" width="600" height="300"></canvas>
+  </div>
+{% endfor %}
+

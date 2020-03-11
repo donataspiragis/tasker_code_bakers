@@ -1,0 +1,8 @@
+name: 'Task statistics'
+description: 'Statistic charts for tasks'
+package: 'Tasker'
+type: module
+version: 1.x
+core: 8.x
+dependencies:
+  - tasker

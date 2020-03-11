@@ -1,0 +1,7 @@
+tasker.statistics.main:
+  title: 'Statistics'
+  route_name: cdp_statistics.pages.render.statistics
+  description: 'List Task entities'
+  weight: 10
+  menu_name: main
+
