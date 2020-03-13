@@ -1,0 +1,5 @@
+name: 'Task API'
+type: module
+description: 'dasfasf.'
+core: 8.x
+package: 'Tasker'
