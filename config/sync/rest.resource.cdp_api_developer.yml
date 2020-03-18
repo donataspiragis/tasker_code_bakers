@@ -1,0 +1,20 @@
+uuid: 26f1c948-4653-4b5b-b29c-01737be26b38
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_api
+    - hal
+    - serialization
+    - user
+id: cdp_api_developer
+plugin_id: cdp_api_developer
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

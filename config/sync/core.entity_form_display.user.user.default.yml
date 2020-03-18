@@ -43,4 +43,5 @@ content:
 hidden:
   field_ex: true
   field_languages: true
+  langcode: true
   timezone: true

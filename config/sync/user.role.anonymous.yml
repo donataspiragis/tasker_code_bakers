@@ -10,3 +10,9 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'restful get cdp_api_tasker'
+  - 'restful get tasker_ap'
+  - 'restful post cdp_api_developer'
+  - 'restful post cdp_api_lead'
+  - 'restful post user_registration'
+  - 'view published task entities'

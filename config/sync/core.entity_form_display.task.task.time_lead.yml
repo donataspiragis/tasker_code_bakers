@@ -11,6 +11,13 @@ targetEntityType: task
 bundle: task
 mode: time_lead
 content:
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   task_deadline:
     type: number
     weight: 0

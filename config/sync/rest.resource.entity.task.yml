@@ -1,0 +1,23 @@
+uuid: 8cdc01d5-c7eb-44d4-9ae4-9f55408a0a2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - serialization
+    - tasker
+id: entity.task
+plugin_id: 'entity:task'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - basic_auth

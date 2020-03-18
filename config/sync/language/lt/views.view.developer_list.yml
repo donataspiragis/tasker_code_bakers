@@ -1,0 +1,41 @@
+label: 'Programuotojų sąrašas'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Pateikti
+          reset_button_label: Atstatyti
+          exposed_sorts_label: 'Rūšiuoti pagal'
+          sort_asc_label: Did
+          sort_desc_label: Maz
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementų puslapyje'
+            items_per_page_options_all_label: '- Visi -'
+            offset_label: Offsetas
+      fields:
+        task_title:
+          label: Pavadinimas
+        task_description__value:
+          label: 'Užduoties aprašymas'
+        task_techlead:
+          label: Techvadovas
+        task_deadline:
+          label: 'Užduoties laikas Techvadovas'
+        task_time_wish:
+          label: 'Užduoties laikas Programuotojas'
+        task_time_true:
+          label: 'Realus laikas'
+        task_url__uri:
+          label: Nuoroda
+        task_status:
+          label: Statusas
+        nothing:
+          label: 'Pasirinktinis tekstas'
+      title: 'Programuotojų sąrašas'
+  page_1:
+    display_options:
+      menu:
+        title: 'Programuotojų sąrašas'

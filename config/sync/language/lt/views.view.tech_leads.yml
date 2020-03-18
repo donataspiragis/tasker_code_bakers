@@ -1,0 +1,43 @@
+label: Techvadovai
+display:
+  default:
+    display_options:
+      filters:
+        status_1:
+          group_info:
+            description: ''
+      exposed_form:
+        options:
+          submit_button: Pateikti
+          reset_button_label: Atstatyti
+          exposed_sorts_label: 'Filtruoti pagal'
+          sort_asc_label: Did
+          sort_desc_label: Maz
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Per puslapi'
+            items_per_page_options_all_label: '- Visi -'
+            offset_label: Offsetas
+      fields:
+        field_first_name:
+          label: Vardas
+        field_last_name:
+          label: Pavarde
+        mail:
+          label: El.p.
+        name:
+          label: 'Vartotojo vardas'
+        status:
+          label: Statusas
+        edit_user:
+          label: Redaguoti
+          text: Redaguoti
+        user_bulk_form:
+          label: atšaukti
+          action_title: Veiksmas
+      title: Techvadovai
+  page_1:
+    display_options:
+      menu:
+        title: Techvadovai

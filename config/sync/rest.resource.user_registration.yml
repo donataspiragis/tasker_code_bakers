@@ -1,0 +1,18 @@
+uuid: 90b58fba-1cf7-4338-b47b-98041f2d31bc
+langcode: en
+status: false
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - user
+id: user_registration
+plugin_id: user_registration
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth
