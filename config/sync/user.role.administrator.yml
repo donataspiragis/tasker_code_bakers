@@ -6,4 +6,14 @@ id: administrator
 label: administrator
 weight: 4
 is_admin: false
-permissions: {  }
+permissions:
+  - 'add task entities'
+  - 'administer rest resources'
+  - 'administer task entities'
+  - 'delete task entities'
+  - 'edit task entities'
+  - 'restful delete cdp_api_tasker'
+  - 'restful patch cdp_api_tasker'
+  - 'restful post cdp_api_tasker'
+  - 'view published task entities'
+  - 'view unpublished task entities'

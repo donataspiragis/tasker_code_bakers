@@ -6,4 +6,7 @@ id: developer
 label: Developer
 weight: 2
 is_admin: null
-permissions: {  }
+permissions:
+  - 'restful delete cdp_api_tasker'
+  - 'restful patch cdp_api_tasker'
+  - 'restful post cdp_api_tasker'

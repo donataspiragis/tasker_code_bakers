@@ -1,0 +1,20 @@
+uuid: 3cca11cc-94a7-498d-879f-04d1c1c87270
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_api
+    - hal
+    - serialization
+    - user
+id: cdp_api_lead
+plugin_id: cdp_api_lead
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

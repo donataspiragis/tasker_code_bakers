@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   label = @Translation("Registration API Lead"),
  *   serialization_class = "Drupal\user\Entity\User",
  *   uri_paths = {
- *     "canonical" = "/api/info",
+ *     "canonical" = "/api/info/lead",
  *     "https://www.drupal.org/link-relations/create" = "/api/register/lead"
  *   }
  * )

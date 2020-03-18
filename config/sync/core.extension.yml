@@ -1,6 +1,8 @@
 module:
+  basic_auth: 0
   block: 0
   breakpoint: 0
+  cdp_api: 0
   cdp_copyright: 0
   cdp_registration: 0
   contextual: 0
@@ -10,6 +12,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hal: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
@@ -18,6 +21,9 @@ module:
   options: 0
   page_cache: 0
   path_alias: 0
+  rest: 0
+  restui: 0
+  serialization: 0
   system: 0
   tasker: 0
   tasker_statistics: 0
