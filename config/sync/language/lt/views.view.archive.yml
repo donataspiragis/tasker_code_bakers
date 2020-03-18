@@ -1,0 +1,26 @@
+label: Archyvas
+description: 'Visas turinys pagal mėnesį.'
+display:
+  default:
+    display_title: Pagrindinis
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Pritaikyti
+          reset_button_label: Išvalyti
+          exposed_sorts_label: 'Rikiuoti pagal'
+          sort_asc_label: Did
+          sort_desc_label: Maž
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Vienetų kiekis puslapyje'
+            items_per_page_options_all_label: '- Visos -'
+            offset_label: Kompensacija
+          tags:
+            previous: ‹‹
+            next: ››
+  block_1:
+    display_title: Blokas
+  page_1:
+    display_title: Puslapis

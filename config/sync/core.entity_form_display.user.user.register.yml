@@ -30,4 +30,5 @@ hidden:
   field_first_name: true
   field_languages: true
   field_last_name: true
+  langcode: true
   timezone: true

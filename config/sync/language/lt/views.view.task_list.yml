@@ -1,0 +1,50 @@
+label: 'Užduočių sąrašas'
+description: 'Čia galite peržiūrėti visas užduotis'
+display:
+  default:
+    display_options:
+      fields:
+        task_title:
+          label: Pavadinimas
+        task_description__value:
+          label: 'Užduoties aprašymas'
+        task_status:
+          label: Statusas
+        task_techlead:
+          label: Techvadovai
+        task_developer:
+          label: Programuotojai
+        task_deadline:
+          label: 'Užduoties laikas Tecvadovas'
+        task_time_wish:
+          label: 'Užduoties laikas Programuotojas'
+        task_time_true:
+          label: 'Realus laikas'
+        task_url__uri:
+          label: Nuoroda
+      filters:
+        task_status:
+          expose:
+            label: Statusas
+          group_info:
+            label: Statusas
+        task_developer:
+          expose:
+            label: Programuotojas
+        task_techlead:
+          expose:
+            label: Techvadovas
+        task_title:
+          expose:
+            label: Pavadinimas
+      exposed_form:
+        options:
+          submit_button: Pateikti
+          reset_button_label: Atstatyti
+          exposed_sorts_label: 'Rūšiuoti pagal'
+          sort_asc_label: Did
+          sort_desc_label: Maz
+  page_1:
+    display_options:
+      menu:
+        title: 'Užduočių sąrašas'

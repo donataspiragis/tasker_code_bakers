@@ -49,4 +49,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_ex: true
+  langcode: true
   timezone: true

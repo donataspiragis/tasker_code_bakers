@@ -1,0 +1,22 @@
+label: Pagrindinis
+display:
+  default:
+    display_options:
+      title: Pagrindinis
+      exposed_form:
+        options:
+          submit_button: Pateikti
+          reset_button_label: Atstatyti
+          exposed_sorts_label: 'Rūšiuoti pagal'
+          sort_asc_label: Did
+          sort_desc_label: Maz
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementai puslapyje'
+            items_per_page_options_all_label: '- Visi -'
+            offset_label: Offsetas
+  page_1:
+    display_options:
+      menu:
+        title: Pagrindinis

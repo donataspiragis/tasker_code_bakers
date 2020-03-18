@@ -5,6 +5,7 @@ module:
   cdp_api: 0
   cdp_copyright: 0
   cdp_registration: 0
+  config_translation: 0
   contextual: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -13,9 +14,11 @@ module:
   file: 0
   filter: 0
   hal: 0
+  language: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -33,6 +36,7 @@ module:
   user: 0
   views_ui: 0
   menu_link_content: 1
+  content_translation: 10
   views: 10
   minimal: 1000
 theme:

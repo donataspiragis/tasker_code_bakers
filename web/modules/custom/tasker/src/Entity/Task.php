@@ -17,6 +17,7 @@ use Drupal\user\Entity\User;
  * @ContentEntityType(
  *   id = "task",
  *   label = @Translation("Task"),
+ *   label_collection = @Translation("Tasks"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\tasker\TaskListBuilder",
@@ -259,6 +260,7 @@ class Task extends ContentEntityBase implements TaskInterface {
     $fields += static::publishedBaseFieldDefinitions($entity_type);
 
     $fields['task_title'] = BaseFieldDefinition::create('string')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task title'))
       ->setDescription(t('The title of the Task entity.'))
       ->setSettings([
@@ -280,6 +282,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setRequired(TRUE);
 
     $fields['task_description'] = BaseFieldDefinition::create('text_long')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task description'))
       ->setDescription(t('Task description.'))
       ->setSettings([
@@ -302,6 +305,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setRequired(TRUE);
 
     $fields['task_status'] = BaseFieldDefinition::create('list_string')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task status'))
       ->setDescription(t('Task status.'))
       ->setSettings([
@@ -326,6 +330,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setRequired(TRUE);
 
     $fields['task_url'] = BaseFieldDefinition::create('link')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task url'))
       ->setDescription(t('Task url.'))
       ->setSettings([
@@ -348,6 +353,7 @@ class Task extends ContentEntityBase implements TaskInterface {
 
 
     $fields['task_developer'] = BaseFieldDefinition::create('entity_reference')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task developer'))
       ->setDescription(t('Task developer.'))
       ->setSetting('target_type', 'user')
@@ -383,6 +389,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setRequired(TRUE);
 
     $fields['task_techlead'] = BaseFieldDefinition::create('entity_reference')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task techlead'))
       ->setDescription(t('Task techlead.'))
       ->setSetting('target_type', 'user')
@@ -418,6 +425,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setRequired(TRUE);
 
     $fields['task_deadline'] = BaseFieldDefinition::create('integer')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task time Tech-lead'))
       ->setDescription(t('Task time evaluated hours.'))
       ->setSettings([
@@ -439,6 +447,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setRequired(TRUE);
 
     $fields['task_time_wish'] = BaseFieldDefinition::create('integer')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task time by Developer'))
       ->setDescription(t('Task time evaluated hours.'))
       ->setSettings([
@@ -460,6 +469,7 @@ class Task extends ContentEntityBase implements TaskInterface {
       ->setRequired(FALSE);
 
     $fields['task_time_true'] = BaseFieldDefinition::create('integer')
+      ->setTranslatable(TRUE)
       ->setLabel(t('Task time it took'))
       ->setDescription(t('Task time evaluated hours.'))
       ->setSettings([

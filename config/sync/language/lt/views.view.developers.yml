@@ -1,0 +1,48 @@
+label: Programuotojai
+display:
+  default:
+    display_options:
+      filters:
+        status_1:
+          group_info:
+            description: ''
+      title: Programuotojai
+      exposed_form:
+        options:
+          submit_button: Pateikti
+          reset_button_label: Atstatyti
+          exposed_sorts_label: 'Rūšiuoti pagal'
+          sort_asc_label: Did
+          sort_desc_label: Maz
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementų puslapyje'
+            items_per_page_options_all_label: '- Visi -'
+            offset_label: Offsetas
+      fields:
+        field_first_name:
+          label: Vardas
+        field_last_name:
+          label: Pavarde
+        mail:
+          label: 'El. p.'
+        name:
+          label: 'Vartotojo vardas'
+        status:
+          label: Statusas
+        edit_user:
+          label: 'Vartotojo redagavimas'
+          text: Redaguoti
+      header:
+        area_text_custom_1:
+          content: '<a href="/admin/people/create"> Prideti vartotoja </a>'
+      empty:
+        area:
+          content:
+            value: 'Pagal jūsų reikalavimus nėra vartotojų.'
+            format: plain_text
+  page_1:
+    display_options:
+      menu:
+        title: Programuotojai
