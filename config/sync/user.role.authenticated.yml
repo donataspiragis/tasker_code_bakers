@@ -11,3 +11,4 @@ is_admin: false
 permissions:
   - 'access content'
   - 'restful get tasker_ap'
+  - 'view published task entities'

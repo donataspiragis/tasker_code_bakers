@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   module:
-    - basic_auth
     - hal
     - serialization
     - tasker
+    - user
 id: entity.task
 plugin_id: 'entity:task'
 granularity: resource
@@ -20,4 +20,4 @@ configuration:
     - hal_json
     - json
   authentication:
-    - basic_auth
+    - cookie

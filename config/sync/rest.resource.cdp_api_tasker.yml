@@ -1,19 +1,17 @@
 uuid: 73eb4ca6-da4a-4580-adb0-ec4b34262a47
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - basic_auth
     - cdp_api
     - hal
     - serialization
-    - user
 id: cdp_api_tasker
 plugin_id: cdp_api_tasker
 granularity: resource
 configuration:
   methods:
-    - GET
     - POST
     - DELETE
     - PATCH
@@ -22,4 +20,3 @@ configuration:
     - json
   authentication:
     - basic_auth
-    - cookie
