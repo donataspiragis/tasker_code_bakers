@@ -8,12 +8,15 @@ weight: 4
 is_admin: false
 permissions:
   - 'add task entities'
+  - 'administer content translation'
   - 'administer rest resources'
   - 'administer task entities'
+  - 'create content translations'
+  - 'delete content translations'
   - 'delete task entities'
   - 'edit task entities'
-  - 'restful delete cdp_api_tasker'
-  - 'restful patch cdp_api_tasker'
-  - 'restful post cdp_api_tasker'
+  - 'translate any entity'
+  - 'translate task'
+  - 'update content translations'
   - 'view published task entities'
   - 'view unpublished task entities'
