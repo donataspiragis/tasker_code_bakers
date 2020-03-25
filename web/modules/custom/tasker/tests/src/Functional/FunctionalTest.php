@@ -7,14 +7,14 @@ use Drupal\Tests\BrowserTestBase;
 /**
  * Skeleton functional test.
  *
- * @group testing_example
+ * @group learning
  * @group examples
  */
 class FunctionalTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected $defaultTheme = 'stark';
+  protected $defaultTheme = 'seven';
 
   /**
    * This test method fails, so we can be sure our test is discovered.
