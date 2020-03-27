@@ -1,16 +1,12 @@
 label: 'Naujausias turinys'
-description: 'Naujausias turinys.'
 display:
   default:
-    display_title: Pagrindinis
     display_options:
       exposed_form:
         options:
           submit_button: Pritaikyti
           reset_button_label: Išvalyti
           exposed_sorts_label: 'Rikiuoti pagal'
-          sort_asc_label: Did
-          sort_desc_label: Maž
       title: 'Naujausias turinys'
       empty:
         area_text_custom:

@@ -8,13 +8,6 @@ display:
           submit_button: Filtruoti
           reset_button_label: Išvalyti
           exposed_sorts_label: 'Rikiuoti pagal'
-          sort_asc_label: Did
-          sort_desc_label: Maž
-      pager:
-        options:
-          tags:
-            first: '«  Pirmas'
-            last: 'Paskutinis »'
       fields:
         title:
           label: Pavadinimas
@@ -55,12 +48,10 @@ display:
       empty:
         area_text_custom:
           content: 'Turinio nėra.'
-    display_title: Pagrindinis
   page_1:
     display_options:
       menu:
         title: Turinys
       tab_options:
         title: Turinys
-        description: 'Raskite ir tvarkykite turinį'
     display_title: Puslapis
