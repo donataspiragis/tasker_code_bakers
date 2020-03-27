@@ -4,14 +4,19 @@ namespace Drupal\Tests\cdp_registration\Functional;
 
 use Drupal\Core\Url;
 use Drupal\Tests\BrowserTestBase;
+use Drupal\user\Entity\User;
 
 /**
  * Testi user login.
  *
- * @group mail_auth
- * @package Drupal\Tests\mail_auth\Functional
+ * @group cdp_registration
+ * @package Drupal\Tests\cdp_registration\Functional
  */
 class LoginTest extends BrowserTestBase {
+  /**
+   * {@inheritdoc}
+   */
+  protected $defaultTheme = 'seven';
 
   /**
    * The modules to load to run the test.
@@ -20,7 +25,6 @@ class LoginTest extends BrowserTestBase {
    */
   public static $modules = [
     'user',
-    'mail_auth',
   ];
 
   /**
@@ -30,16 +34,17 @@ class LoginTest extends BrowserTestBase {
     parent::setUp();
   }
 
+
   /**
-   * Test for the drupal login form.
+   * Test for the login form.
    */
   public function testLogin() {
-    $user = $this->drupalCreateUser([], 'testUser');
-    $session = $this->assertSession();
-    $user_login_form_route = Url::fromRoute('user.login');
-    $this->drupalGet($user_login_form_route);
-    $session->statusCodeEquals(200);
-    $session->fieldExists('name');
+    $user = $this->drupalCreateUser();
+    $this->drupalLogin($user);
   }
+
+
+
+
 
 }
